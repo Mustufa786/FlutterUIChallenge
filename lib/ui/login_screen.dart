@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_ui_one/ui/dashboard.dart';
 import 'package:flutter_ui_one/widgets/divider_with_text.dart';
 import 'package:flutter_ui_one/widgets/login_button.dart';
 
@@ -46,10 +47,16 @@ class LoginScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5),
                           ),
-                          splashColor: Colors.white70,
                           color: Color(0xFF2780EC),
                           //0xFF053F81
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => DashBoardScreen(),
+                              ),
+                            );
+                          },
                           child: Center(
                             child: Text(
                               "Create an Account",
